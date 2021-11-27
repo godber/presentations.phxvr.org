@@ -12,6 +12,7 @@ phxvr.org/webvr.dev
 * Low friction
   * Immersive with 2D fallback
   * Distribution is easier
+  * Source easily shared and copied
 * The web eats everything
 * Lots of cases where it's a bad choice
 
@@ -30,6 +31,7 @@ Javascript API supported by major browsers
     * OpenGL ES 2.0 on HTML 5
 * `v2` - 2017 ([link](https://www.khronos.org/registry/webgl/specs/latest/2.0/))
     * OpenGL ES 3.0 on HTML 5
+    * **Extends** `v1`
 
 
 All sensible modern browsers support WebGL2 at this point.
@@ -38,15 +40,37 @@ You can test yours here:
 https://get.webgl.org/webgl2/
 
 
-Safari was a little behind the curve, but the latest versions do support it.
+iOS and MacOS Safari was a little behind the curve, but the latest versions do appear to
+support it (Nov 2021).
 
 
-## Options
+You can write WebGL v1/v2 code directly, but you do so by writing in a low level
+language understood by GPUs called GLSL.
 
+I think most people use higher level options we'll discuss later.
+
+
+Here are two great resources for exploring the WebGL route:
+
+* https://webglfundamentals.org/
+* https://webgl2fundamentals.org/
+
+
+## How to do it?
+
+Your options for building an immersive experience on the web include:
+
+* Direct WebGL Implementation
 * Javascript WebXR Framework
-* Game Engine Build for WebGL
+* Export WebGL from a Game Engine
     * Unity, Unreal, Godot
     * Wavering support
+* WebXR Engines
+    * https://wonderlandengine.com/
+    * Are there more?
+
+
+We're going to concentrate the Javascript/HTML Frameworks and demo some options.
 
 
 
