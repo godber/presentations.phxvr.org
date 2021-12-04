@@ -109,6 +109,11 @@ Your options for building an immersive experience on the web include:
 We're going to concentrate the Javascript/HTML Frameworks.
 
 
+<img height=600px src="./webxr-stack-v1.png">
+
+
+<img height=600px src="./webxr-stack-js-v1.png">
+
 
 ## Javascript WebXR Frameworks
 
@@ -119,10 +124,11 @@ We're going to concentrate the Javascript/HTML Frameworks.
 * `ar.js`
 
 
+
 ## Threejs
 
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width=100 height=100 fill="none" stroke-linecap="square" stroke-miterlimit="10" version="1.1" viewBox="0 0 226.77 226.77" xmlns="http://www.w3.org/2000/svg">
+<svg width=100 height=100 style="float:left" fill="none" stroke-linecap="square" stroke-miterlimit="10" version="1.1" viewBox="0 0 226.77 226.77" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(8.964 4.2527)" fill-rule="evenodd" stroke="#000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="4">
   <path d="m63.02 200.61-43.213-174.94 173.23 49.874z"/>
   <path d="m106.39 50.612 21.591 87.496-86.567-24.945z"/>
@@ -151,6 +157,11 @@ Javascript framework for working with WebGL and WebXR ... scenegraph based:
 ```js
 const foo = 'bar';
 ```
+
+
+<section>
+<div><iframe height="600px" width="800px" src="./ex/threejs/index.html"></iframe></div>
+</section>
 
 
 
