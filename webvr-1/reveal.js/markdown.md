@@ -122,6 +122,7 @@ We're going to concentrate the Javascript/HTML Frameworks.
     * `react-three-fiber` (`r3f`)
 * `babylonjs`
 * `ar.js`
+* Likely many more, including commercial options.
 
 
 
@@ -139,6 +140,11 @@ We're going to concentrate the Javascript/HTML Frameworks.
  </g>
 </svg>
 
+A scenegraph based Javascript framework for making 3d & VR webapps using WebGL and WebXR:
+
+
+### Three.js References
+
 * https://threejs.org
 * [docs](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)
 * [examples](https://threejs.org/examples/#webgl_animation_keyframes)
@@ -148,14 +154,65 @@ We're going to concentrate the Javascript/HTML Frameworks.
 
 ### Threejs Fundamentals
 
-Javascript framework for working with WebGL and WebXR ... scenegraph based:
-
-
 <img src="./threejs-structure.svg">
 
 
+## `index.html` file
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My first three.js app</title>
+        <style>
+            body { margin: 0; }
+        </style>
+    </head>
+    <body>
+        <script src="./three.min.js"></script>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
+```
+
+
+## `main.js` file
+
 ```js
-const foo = 'bar';
+import { VRButton } from './jsm/webxr/VRButton.js';
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+    75, window.innerWidth / window.innerHeight, 0.1, 1000
+);
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+
+document.body.appendChild(VRButton.createButton(renderer));
+renderer.xr.enabled = true;
+```
+
+
+## `main.js` file (continued)
+
+```js
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial(
+    { color: 0x00ff00 }
+);
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
+camera.position.z = 5;
+
+const animate = function () {
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render( scene, camera );
+}
+renderer.setAnimationLoop(animate);
 ```
 
 
@@ -167,7 +224,34 @@ const foo = 'bar';
 
 ## Aframe
 
-threejs wrapper
+> A-Frame is not just a 3D scene graph or a markup language; the core is a powerful entity-component framework that provides a declarative, extensible, and composable structure to three.js.
+
+-- A-Frame Introduction
+
+
+```html
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5"
+        height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0"
+        width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
+```
+
+
+<section>
+<div><iframe height="600px" width="800px" src="./ex/aframe/index.html"></iframe></div>
+</section>
 
 
 
