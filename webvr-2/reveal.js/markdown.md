@@ -7,6 +7,22 @@ Austin Godber
 webvr.dev
 
 
+## What is WebXR
+
+3D content delivered over the web, consumed in an immersive environment, like
+an AR camera app or a VR headset.
+
+
+There is a slight distinction from 3D content delivered over the web, that you
+interact with inside your 2D browser window.
+
+
+Consider the difference between two websites that sell hats:
+
+* A traditional site may show a 3D model of the hat in your browser window.
+* A WebXR site would use your camera and display that hat on your head.
+
+
 ## Why the Web?
 
 * Low friction
@@ -110,6 +126,21 @@ only barely implemented.
 The `v5` BabylonJS framework currently supports it experimentally.
 
 
+## Things to keep in mind
+
+WebXR is a combination of:
+
+* 3D Graphics Programming
+* Immersive UIs and hardware
+
+
+All of these options offer a route to learning 3D Graphics Programming and this
+is the first core challenge.
+
+
+Immersive UI/UX is the second.
+
+
 
 # Tools
 
@@ -143,21 +174,6 @@ We're going to concentrate the Javascript/HTML Frameworks.
 * `babylonjs`
 * `ar.js`
 * Likely many more, including commercial options.
-
-
-## Things to keep in mind
-
-WebXR is a combination of:
-
-* 3D Graphics Programming
-* Immersive UIs and hardware
-
-
-All of these options offer a route to learning 3D Graphics Programming and this
-is the first core challenge.
-
-
-Immersive UI/UX is the second.
 
 
 
