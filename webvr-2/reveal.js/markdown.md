@@ -23,13 +23,6 @@ webvr.dev
 I already bought the domain.
 
 
-## Outline
-
-* Foundation
-* Tools
-* Demo
-* Other Examples
-
 
 # Foundation
 
@@ -63,6 +56,13 @@ standardized.
 
 ## WebGL/WebGL2 APIs
 
+> WebGL (Web Graphics Library) is a JavaScript API for rendering 
+> high-performance interactive 3D and 2D graphics within any compatible web
+> browser without the use of plug-ins.
+
+-- [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)
+
+
 API supported by major browsers
 
 * `v1` - 2011 ([link](https://www.khronos.org/registry/webgl/specs/latest/1.0/))
@@ -80,10 +80,6 @@ You can test yours here:
 https://get.webgl.org/webgl2/
 
 
-iOS and MacOS Safari was a little behind the curve, but the latest versions do appear to
-support it (Nov 2021).
-
-
 You can write WebGL v1/v2 code directly, but you do so by writing GLSL code, a
 low level language understood by GPUs, wrapped in Javascript.
 
@@ -99,7 +95,7 @@ Here are two great resources for exploring the "bare" WebGL route:
 ## WebGPU API
 
 
-Currently in Working Draft status
+*Currently in Working Draft status*
 
 
 > WebGPU exposes an API for performing operations, such as rendering and
@@ -112,6 +108,7 @@ I think this is what we will all be using in 2-5 years., but is still a draft,
 only barely implemented.
 
 The `v5` BabylonJS framework currently supports it experimentally.
+
 
 
 # Tools
@@ -335,13 +332,21 @@ Features:
 https://spector.babylonjs.com/
 
 
-## PWA on Oculus
 
-https://timmykokke.com/blog/2021-11-05-webxr-pwa-apk/
+# Other
+
 
 ## Physics
+
+There are a number of "game physics" and animation type libraries:
 
 * `ammo.js`
 * `canon.js`??
 
+
+## PWA on Oculus
+
+It's possible to create a Native Oculus Quest App using WebXR Technology
+
+https://timmykokke.com/blog/2021-11-05-webxr-pwa-apk/
 
